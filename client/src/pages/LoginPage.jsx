@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [currentState, setCurrentState] = useState("Sign up");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(""); 
   const [bio, setBio] = useState("");
   const [isDataSubmitted, setIsDataSubmitted] = useState(false);
 
@@ -59,7 +59,7 @@ const LoginPage = () => {
 
         {currentState === "Sign up" && isDataSubmitted && (
             <textarea onChange={(e) => setBio(e.target.value)} value={bio}
-             rows={4} className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus-ring:indigo-500' placeholder='provide a short bio' required></textarea>
+             rows={4} className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus-ring:indigo-500' placeholder='provide a short bio...' required></textarea>
           )
         }
 
@@ -83,7 +83,7 @@ const LoginPage = () => {
           ) : (
             <p className='text-sm text-gray-600'>Create an account  
             <span onClick={() => setCurrentState("Sign up")}
-             className='font-medium text-violet-500 cursor-pointer'>  Click here</span></p>
+             className='font-medium text-violet-500 cursor-pointer'>Click here</span></p>
           )}
         </div>
       </form>
