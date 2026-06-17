@@ -1,1 +1,11 @@
-node_modules
+node_modules/
+
+.env
+client/.env
+server/.env
+
+dist/
+build/
+client/dist/
+
+.vercel/
